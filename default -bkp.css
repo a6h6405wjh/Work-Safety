@@ -1,0 +1,187 @@
+﻿/*Grid view*/
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] 
+{
+    float: left;
+    padding: 15px;
+	border: 1px dashed rgba(0,0,0,0.15);
+}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+
+body
+{
+	font-family: sans-serif;
+	color: #606466;
+	background: #464a4d;
+	margin: 0;
+}
+
+#ribbon 
+{
+	position: relative;
+	background: #e9eef2;
+	height: 200px;
+	margin: 0;
+	/*border-bottom: 2px solid white;*/
+}
+
+#ribbon > div:last-child /* Slide column */
+{
+	position: absolute;
+	left: 50%;
+	right: 0;
+	height: 400px;
+}
+
+#logo
+{
+	/*position: relative;
+	top: 50%;
+	transform: translateY(-50%);*/
+	height: 125px;
+}
+
+#rotator /* Slides parent */
+{
+/*
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);*/
+	
+	position: relative;
+	height: 400px;
+	width: 525px;
+}
+
+#rotator > div /* Slide */
+{
+	/* Required */
+	width: 0;
+	transition-property: width;
+	transition-delay: 1.5s;
+	overflow: hidden;
+	/* End */
+	
+	position: absolute;
+	height: 100%;
+	padding: 0;
+}
+
+#rotator > div > h1 /* Slide caption */
+{
+	background: rgba(0,0,0, 0.25);
+	padding: 10px;
+	font-size: 1.5em;
+	margin: 0;
+	color: white;
+	position: absolute;
+	white-space: pre;
+	width: 100%;
+	bottom: 0px;
+}
+
+
+#rotator > div > img /* Slide image */
+{
+	height: 100%;
+}
+
+.dimmer
+{
+	transition: opacity 1.5s ease;
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	background: #464a4d;
+}
+
+.expand
+{	
+	z-index: 2;
+	transition: width 1.5s ease;
+	transition-delay: 0s !important;
+	width: 100% !important;
+}
+
+#slide > img
+{
+	height: 100%;
+}
+
+#navbar
+{
+	position: relative;
+	height: 60px;
+	background: #8cc63f;
+	/*border-top: 8px solid #85bf39;*/
+}
+
+#navbar .button
+{	
+	display: inline-block;
+	height: 50px;
+	padding: 0 10px;
+}
+
+#navbar .button:hover
+{
+	transition: background .5s ease;
+	background: #9dd94c;
+}
+
+
+
+#navbar a
+{
+	line-height: 60px;
+	font-weight: bold;
+	color: #464a4d;
+	text-decoration: none;
+}

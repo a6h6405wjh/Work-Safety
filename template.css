@@ -1,0 +1,116 @@
+﻿    /* General structure = = = = = */
+
+    *
+    {
+        box-sizing: border-box;
+    }
+
+    body
+    {
+        font-family: sans-serif;
+        background: #464a4d;
+        margin: 0;
+        font-size: 100%;
+    }
+
+
+
+    .row
+    {
+    }
+
+    .row::after:not(:last-child)
+    {
+        content: '';
+        display: block;
+    }
+
+    [class^="span"]
+    {
+        display: inline-block;
+        outline: 1px dashed rgba(0,0,0,0.15);
+    }
+
+    .span1 {width: 8.33%;}
+    .span2 {width: 16.66%;}
+    .span3 {width: 25%;}
+    .span4 {width: 33.33%;}
+    .span5 {width: 41.66%;}
+    .span6 {width: 50%;}
+    .span7 {width: 58.33%;}
+    .span8 {width: 66.66%;}
+    .span9 {width: 75%;}
+    .span10 {width: 83.33%;}
+    .span11 {width: 91.66%;}
+    .span12 {width: 100%;}
+
+    /* Top level elements = = = = = */
+
+#header
+{
+    background: #e9eef2;
+    padding: 2vh 16.66%;
+    position: relative;
+}
+
+    #header img
+    {
+        min-height: 6em;
+        max-height: 9em;
+        height: 15vh;
+        width: auto;
+    }
+
+    #header strong
+    {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        padding: 16px;
+        padding: 2vh;
+        color: #8cc63f;
+        font-size: 1.5em;
+        max-width: 50%;
+        max-height: 3em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #navbar
+    {
+        background: #8cc63f;
+    }
+
+
+    @media only screen and (max-width : 1199px)
+    {
+        [class^="span"]
+        {
+            width: 100%;
+        }
+
+        #header
+        {
+            text-align: center;
+        }
+
+        #header strong
+        {
+            display: block;
+        }
+    }
+
+    /* Desktop */
+    @media only screen and (min-width : 1200px)
+    {
+    }
+
+
+    #header .content
+    {
+        width: 83.33%;
+        margin: 0 16.66%;
+    }
